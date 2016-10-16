@@ -1,9 +1,10 @@
-.background    { background: rgb(52, 166, 251);
+.background    { background: rgb(111, 203, 129);
                  table-layout: fixed;
                  border-spacing: 0;   }
 .background td { padding: 0;          }
 .lava          { background: rgb(255, 100, 100); }
 .wall          { background: white;   }
+.floater       { background: rgb(52, 166, 251);  }
 
 .actor  { position: absolute;  }
 .coin   { background: rgb(241, 229, 89); }
