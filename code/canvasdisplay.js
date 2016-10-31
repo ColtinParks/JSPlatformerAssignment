@@ -67,9 +67,6 @@ CanvasDisplay.prototype.clearDisplay = function() {
                    this.canvas.width, this.canvas.height);
 };
 
-var otherSprites = document.createElement("img");
-otherSprites.src = "img/sprites.png";
-
 CanvasDisplay.prototype.drawBackground = function() {
   var view = this.viewport;
   var xStart = Math.floor(view.left);
@@ -91,8 +88,6 @@ CanvasDisplay.prototype.drawBackground = function() {
   }
 };
 
-var playerSprites = document.createElement("img");
-playerSprites.src = "img/player.png";
 var playerXOverlap = 4;
 
 CanvasDisplay.prototype.drawPlayer = function(x, y, width,
