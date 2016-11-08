@@ -342,15 +342,19 @@ function runLevel(level, Display, andThen) {
   });
 }
 
+//Added alert messages when losing, loading next level, and completing game
 function runGame(plans, Display) {
   function startLevel(n) {
     runLevel(new Level(plans[n]), Display, function(status) {
       if (status == "lost")
         startLevel(n);
+        alert("Oh no!, restarting level");
       else if (n < plans.length - 1)
         startLevel(n + 1);
+        alert("Continuing to next level!");
       else
         console.log("You win!");
+        alert("You win!");
     });
   }
   startLevel(0);
