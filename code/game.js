@@ -2,6 +2,7 @@ var actorChars = {
   "@": Player,
   "o": Coin,
   "=": Lava, "|": Lava, "v": Lava,
+  "a": Floater, "b": Floater
 };
 
 function Level(plan) {
@@ -78,6 +79,19 @@ function Lava(pos, ch) {
   }
 }
 Lava.prototype.type = "lava";
+
+//Floater coding segment:
+function Floater(pos, ch) {
+  this.pos = pos;
+  this.size = new Vector(1, 1);
+  if (ch == "a") {
+    this.speed = new Vector(0, 2);
+  } else if (ch == "b") {
+    this.speed = new Vector(0, -2);
+  }
+}
+Floater.prototype.type = "floater";
+//End Floater coding segment
 
 function elt(name, className) {
   var elt = document.createElement(name);
