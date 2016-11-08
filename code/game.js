@@ -2,6 +2,7 @@ var actorChars = {
   "@": Player,
   "o": Coin,
   "=": Lava, "|": Lava, "v": Lava,
+  "a": Floater, "b": Floater,
 };
 
 function Level(plan) {
@@ -19,9 +20,9 @@ function Level(plan) {
         this.actors.push(new Actor(new Vector(x, y), ch));
       else if (ch == "x")
         fieldType = "wall";
-      else if (ch == "!")
+      else if (ch == "!" || ch == "|" || ch == "v")
         fieldType = "lava";
-      else if (ch == "y")
+      else if (ch == "a" || ch == "b")
         fieldType = "floater";
       gridLine.push(fieldType);
     }
@@ -78,6 +79,21 @@ function Lava(pos, ch) {
   }
 }
 Lava.prototype.type = "lava";
+
+//Re-enabling Floaters again
+function Floater(pos, ch) {
+  this.pos = pos;
+  this.size = new Vector(1, 1);
+  if (ch == "a") {
+    this.speed = new Vector(0, -2);
+    this.repeatPos = pos;
+  } else if (ch == "b") {
+    this.speed = new Vector(0, 2);
+    this.repeatPos = pos;
+  }
+}
+Floater.prototype.type = "floater";
+//End of Floater coding
 
 function elt(name, className) {
   var elt = document.createElement(name);
