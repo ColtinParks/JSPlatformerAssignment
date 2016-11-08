@@ -67,6 +67,10 @@ CanvasDisplay.prototype.clearDisplay = function() {
                    this.canvas.width, this.canvas.height);
 };
 
+//Re-enabling Sprites
+var otherSprites = document.createElement("img");
+otherSprites.src = "img/OTHER SPRITE HERE.png";
+
 CanvasDisplay.prototype.drawBackground = function() {
   var view = this.viewport;
   var xStart = Math.floor(view.left);
@@ -88,6 +92,9 @@ CanvasDisplay.prototype.drawBackground = function() {
   }
 };
 
+//Re-enabling Sprites
+var playerSprites = document.createElement("img");
+playerSprites.src = "img/PLAYER SPRITE HERE.png";
 var playerXOverlap = 4;
 
 CanvasDisplay.prototype.drawPlayer = function(x, y, width,
