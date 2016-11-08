@@ -69,7 +69,7 @@ CanvasDisplay.prototype.clearDisplay = function() {
 
 //Re-enabling Sprites
 var otherSprites = document.createElement("img");
-otherSprites.src = "img/OTHER SPRITE HERE.png";
+otherSprites.src = "img/Other_Sprites.png";
 
 CanvasDisplay.prototype.drawBackground = function() {
   var view = this.viewport;
@@ -94,7 +94,7 @@ CanvasDisplay.prototype.drawBackground = function() {
 
 //Re-enabling Sprites
 var playerSprites = document.createElement("img");
-playerSprites.src = "img/PLAYER SPRITE HERE.png";
+playerSprites.src = "img/Player_Sprites.png";
 var playerXOverlap = 4;
 
 CanvasDisplay.prototype.drawPlayer = function(x, y, width,
